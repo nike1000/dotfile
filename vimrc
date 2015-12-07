@@ -14,7 +14,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
 " Syntax checking for vim
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
@@ -36,6 +36,7 @@ filetype plugin indent on	" 啟動自動完成
 
 set nocompatible	" VIM 不使用和 VI 相容的模式
 set confirm      	" 操作過程有衝突時，以明確的文字來詢問
+set background=dark " 啟用暗色背景模式 
 
 set nobackup		" 取消備份
 set noswapfile		" 取消swap

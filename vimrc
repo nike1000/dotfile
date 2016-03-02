@@ -39,6 +39,16 @@ set backspace=eol,start,indent
 "-----------------------------------------
 " Vim Bundle Plugin Manager & Plugins
 "-----------------------------------------
+let iCanHazNeoBundle=1
+let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+if !filereadable(neobundle_readme)
+    echo "Installing NeoBundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+        let iCanHazNeoBundle=0
+endif
+
 
 if 0 | endif
     if &compatible
@@ -53,10 +63,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'               "NeoBundle自我管理
 
 " My Bundles here:
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBunlde 'tomtom/tlib_vim'
-NeoBunlde 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
-
 
 call neobundle#end()
 

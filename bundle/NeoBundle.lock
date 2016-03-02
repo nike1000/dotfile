@@ -1,4 +1,3 @@
 NeoBundleLock neobundle.vim eefc3b845612d9476fc43efe495945c32d13cb5d
 NeoBundleLock vim-addon-mw-utils 0c5612fa31ee434ba055e21c76f456244b3b5109
-NeoBundleLock vim-snippets 732978ab1622c8d6fdf0384cd3b524e3fe7ba5f3
-NeoBundleLock vimproc 996365866652e8b50978274ec6ffd6b0a711d91f
+NeoBundleLock vim-snippets d0b52b1dc48395b3015e50f61a3a37212ad3552a

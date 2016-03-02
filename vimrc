@@ -1,24 +1,4 @@
 "-----------------------------------------
-" Vim Bundle Plugin Manager & Plugins
-"-----------------------------------------
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
-
-" let Vundle manage itself
-Plugin 'gmarik/vundle'
-
-" Quick implement some code snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-
-" Syntax checking for vim
-" Plugin 'scrooloose/syntastic'
-
-call vundle#end()
-
-"-----------------------------------------
 " Encoding Setting
 "-----------------------------------------
 set encoding=utf-8                                  
@@ -57,5 +37,40 @@ set expandtab		" 將tab用空格代替 [需要輸入真正tab，使用Ctrl+V + T
 set backspace=eol,start,indent
 
 "-----------------------------------------
+" Vim Bundle Plugin Manager & Plugins
+"-----------------------------------------
+
+if 0 | endif
+    if &compatible
+        set nocompatible
+endif
+
+set runtimepath^=~/.vim/bundle/neobundle.vim/       "run time path必須
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'               "NeoBundle自我管理
+
+" My Bundles here:
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBunlde 'tomtom/tlib_vim'
+NeoBunlde 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets'
+
+
+call neobundle#end()
+
+filetype plugin indent on                           " 必須
+
+NeoBundleCheck                                      "安裝確認
+
+"簡易指令
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+
+"-----------------------------------------
 " Plugin Setting
 "-----------------------------------------
+

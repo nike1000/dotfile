@@ -64,7 +64,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'               "NeoBundle自我管理
 " My Bundles here:
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'klen/python-mode'
 
 call neobundle#end()
 

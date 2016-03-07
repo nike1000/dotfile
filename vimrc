@@ -36,6 +36,8 @@ set expandtab		" 將tab用空格代替 [需要輸入真正tab，使用Ctrl+V + T
 
 set backspace=eol,start,indent
 
+nnoremap <silent> <F9> :set paste<CR>
+
 "-----------------------------------------
 " Vim Bundle Plugin Manager & Plugins
 "-----------------------------------------

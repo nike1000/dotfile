@@ -1,5 +1,13 @@
-YouCompleteMe
 neobundle.vim
+neocomplete
+neosnippet
+neosnippet-snippets
+nerdcommenter
 python-mode
-vim-addon-mw-utils
+vim-airline
+vim-airline-themes
+vim-colors-solarized
+vim-cpp-enhanced-highlight
+vim-fugitive
+vim-indent-guides
 vim-snippets

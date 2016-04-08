@@ -93,8 +93,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'               "NeoBundle自我管理
 
 " My Bundles here:
 " NeoBundle 'Shougo/vimproc.vim'                      " NeoBundle 使用
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'klen/python-mode'
+NeoBundleLazy 'honza/vim-snippets'
+NeoBundleLazy 'klen/python-mode'
 " NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bling/vim-airline'                       " powerline 輕量化版
 NeoBundle 'vim-airline/vim-airline-themes'          " airline 主題

@@ -17,6 +17,7 @@ filetype plugin indent on	" 啟動自動完成
 set nocompatible	" VIM 不使用和 VI 相容的模式
 set confirm      	" 操作過程有衝突時，以明確的文字來詢問
 set background=dark " 啟用暗色背景模式 
+set hlsearch        " 搜尋結果上色
 
 set nobackup		" 取消備份
 set noswapfile		" 取消swap
@@ -64,7 +65,7 @@ nnoremap <silent> <Leader>q zM<CR>
 nnoremap <silent> <Leader>z zR<CR> 
 
 " 開關視覺縮排
-nmap <silent> <Leader>i <Plug>IndentGuidesToggle
+nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
 "-----------------------------------------
 " Vim Bundle Plugin Manager & Plugins
@@ -99,6 +100,7 @@ NeoBundleLazy 'klen/python-mode'
 NeoBundle 'bling/vim-airline'                       " powerline 輕量化版
 NeoBundle 'vim-airline/vim-airline-themes'          " airline 主題
 NeoBundle 'altercation/vim-colors-solarized'        " vim 顏色
+NeoBundle 'tomasr/molokai'                          " vim 顏色
 NeoBundle 'tpope/vim-fugitive'                      " 用來讓 airline 顯示 git branch
 NeoBundle 'octol/vim-cpp-enhanced-highlight'        " 增強C/C++語法上色
 NeoBundle 'nathanaelkane/vim-indent-guides'         " 視覺化縮排
@@ -133,6 +135,7 @@ set t_Co=256
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
+colorscheme molokai
 
 " Neosnippet
 " Plugin key-mappings.

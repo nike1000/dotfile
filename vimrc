@@ -1,4 +1,4 @@
-"-----------------------------------------
+"""-----------------------------------------
 " Encoding Setting
 "-----------------------------------------
 set encoding=utf-8                                  
@@ -67,6 +67,9 @@ nnoremap <silent> <Leader>z zR<CR>
 " 開關視覺縮排
 nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
+" 切換背景亮暗(colorscheme 會被切成 default)
+" map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
 "-----------------------------------------
 " Vim Bundle Plugin Manager & Plugins
 "-----------------------------------------
@@ -99,8 +102,10 @@ NeoBundleLazy 'klen/python-mode'
 " NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bling/vim-airline'                       " powerline 輕量化版
 NeoBundle 'vim-airline/vim-airline-themes'          " airline 主題
-NeoBundle 'altercation/vim-colors-solarized'        " vim 顏色
-NeoBundle 'tomasr/molokai'                          " vim 顏色
+NeoBundle 'xolox/vim-misc'                          " vim-colorscheme-switcher 必需
+NeoBundle 'xolox/vim-colorscheme-switcher'          " 切換 colorscheme
+NeoBundle 'altercation/vim-colors-solarized'        " vim colorscheme
+NeoBundle 'tomasr/molokai'                          " vim colorscheme
 NeoBundle 'tpope/vim-fugitive'                      " 用來讓 airline 顯示 git branch
 NeoBundle 'octol/vim-cpp-enhanced-highlight'        " 增強C/C++語法上色
 NeoBundle 'nathanaelkane/vim-indent-guides'         " 視覺化縮排
@@ -223,3 +228,9 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" vim-colorscheme-switcher
+" let g:colorscheme_switcher_define_mappings = 0                    " 改變預設shift<F8>、<F8>的mapping，需自訂
+" let g:colorscheme_switcher_keep_background = 1                    " 只切換同背景色的 colorscheme
+let g:colorscheme_switcher_exclude_builtins = 1                     " 內建的不加入切換清單
+" let g:colorscheme_switcher_exclude = ['default', 'test']          " 自訂排除的 colorscheme

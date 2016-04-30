@@ -44,7 +44,7 @@ set expandtab		" 將tab用空格代替 [需要輸入真正tab，使用Ctrl+V + T
 set foldmethod=indent   " 根據縮排折疊
 set nofoldenable        " 開啟vim時預設不折疊
 set foldnestmax=3       " 最多摺疊三層
-set foldcolumn=2        " 左側空兩格顯示摺疊深度
+"set foldcolumn=2        " 左側空兩格顯示摺疊深度
 
 set backspace=eol,start,indent
 
@@ -68,7 +68,7 @@ nnoremap <silent> <Leader>z zR<CR>
 nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
 " 切換背景亮暗(colorscheme 會被切成 default)
-" map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 "-----------------------------------------
 " Vim Bundle Plugin Manager & Plugins

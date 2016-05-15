@@ -13,6 +13,7 @@ set promptchars="%#"
 set autolist
 
 setenv LSCOLORS gxfxcxdxbxegedabagacad
+setenv PAGER most
 
 alias tmux  tmux -2
 alias vim /opt/local/bin/vim

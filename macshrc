@@ -17,3 +17,4 @@ setenv PAGER most
 
 alias tmux  tmux -2
 alias vim /opt/local/bin/vim
+alias ls ls -G

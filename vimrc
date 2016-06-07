@@ -29,7 +29,7 @@ syntax on		    " 允許指定語法上色替代預設配置
 
 set cursorline      " 標示目前列
 set number          " 標示行號
-set nowrap          " 禁止拆行
+set wrap            " 邊界拆行
 set wildmenu
 set ignorecase
 set incsearch

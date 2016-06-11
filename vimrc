@@ -113,7 +113,7 @@ NeoBundle 'scrooloose/nerdcommenter'                " 快速註解
 NeoBundle 'Shougo/neocomplete'                      " 自動補齊 選單
 NeoBundle 'Shougo/neosnippet'                       " 快速模板工具
 NeoBundle 'Shougo/neosnippet-snippets'              " 快速模板定義
-
+NeoBundle 'chriskempson/vim-tomorrow-theme'         " 支援多種 IDE 的 colorscheme theme
 
 call neobundle#end()
 

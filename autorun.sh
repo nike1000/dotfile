@@ -33,7 +33,7 @@ done
 
 for config in $file;do
     if [ -f "$homepath/.$config" ]; then
-        if [ "$remove" == "false" ]; then 
+        if [ "$remove" = "false" ]; then 
             mv "$homepath/.$config" "$homepath/.$config.old"
         else
             rm -f "$homepath/.$config"

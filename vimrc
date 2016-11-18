@@ -67,8 +67,6 @@ nnoremap <silent> <Leader>z zR<CR>
 " 開關視覺縮排
 nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
 
-" 切換背景亮暗(colorscheme 會被切成 default)
-map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 "-----------------------------------------
 " Vim Bundle Plugin Manager & Plugins
@@ -98,7 +96,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'               "NeoBundle自我管理
 " My Bundles here:
 " NeoBundle 'Shougo/vimproc.vim'                      " NeoBundle 使用
 NeoBundleLazy 'honza/vim-snippets'
-NeoBundleLazy 'klen/python-mode'
+" NeoBundleLazy 'klen/python-mode'
 " NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bling/vim-airline'                       " powerline 輕量化版
 NeoBundle 'vim-airline/vim-airline-themes'          " airline 主題
@@ -111,9 +109,11 @@ NeoBundle 'octol/vim-cpp-enhanced-highlight'        " 增強C/C++語法上色
 NeoBundle 'nathanaelkane/vim-indent-guides'         " 視覺化縮排
 NeoBundle 'scrooloose/nerdcommenter'                " 快速註解
 NeoBundle 'Shougo/neocomplete'                      " 自動補齊 選單
-NeoBundle 'Shougo/neosnippet'                       " 快速模板工具
-NeoBundle 'Shougo/neosnippet-snippets'              " 快速模板定義
+" NeoBundle 'Shougo/neosnippet'                       " 快速模板工具
+" NeoBundle 'Shougo/neosnippet-snippets'              " 快速模板定義
 NeoBundle 'chriskempson/vim-tomorrow-theme'         " 支援多種 IDE 的 colorscheme theme
+NeoBundle 'airblade/vim-gitgutter'                  " gitdiff 狀態顯示
+NeoBundle 'rhysd/vim-clang-format'
 
 call neobundle#end()
 
@@ -136,21 +136,18 @@ let g:airline_powerline_fonts = 1
 let g:solarized_termcolors=256
 set t_Co=256
 
-" vim-indent-guides
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_start_level=2
-let g:indent_guides_guide_size=1
+" vim-indent-guides 視覺化縮排
+let g:indent_guides_enable_on_vim_startup=1    " 開啟
+let g:indent_guides_start_level=2              " 多少層級以上顯示視覺縮排
+let g:indent_guides_guide_size=1               " 視覺縮排佔位寬
 colorscheme molokai
 
 " Neosnippet
 " Plugin key-mappings.
-imap <C-d>     <Plug>(neosnippet_expand_or_jump)
-smap <C-d>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-d>     <Plug>(neosnippet_expand_target)
+" imap <C-d>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-d>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-d>     <Plug>(neosnippet_expand_target)
 
-" SuperTab like snippets behavior.
-"imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " For conceal markers.
 if has('conceal')
@@ -234,3 +231,10 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " let g:colorscheme_switcher_keep_background = 1                    " 只切換同背景色的 colorscheme
 let g:colorscheme_switcher_exclude_builtins = 1                     " 內建的不加入切換清單
 " let g:colorscheme_switcher_exclude = ['default', 'test']          " 自訂排除的 colorscheme
+
+
+" vim-gitgutter
+set updatetime=250
+" <Leader>hp 顯示該區塊差異細節
+" 使用 <ctrl>w+o 關閉當前分頁以外的其他分頁
+" 使用 <ctrl>w+方向鍵移動到不同分頁

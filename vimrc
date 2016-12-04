@@ -237,15 +237,27 @@ let g:colorscheme_switcher_exclude_builtins = 1                     " 內建的�
 
 " vim-gitgutter
 set updatetime=250
-" <Leader>hp 顯示該區塊差異細節
+" default <Leader>hp 顯示該區塊差異細節
+nmap <Leader>d <Plug>GitGutterPreviewHunk
 " 使用 <ctrl>w+o 關閉當前分頁以外的其他分頁
 " 使用 <ctrl>w+方向鍵移動到不同分頁
 
 
-let g:clang_format#code_style = 'google'
-let g:clang_format#auto_format = 1
-let g:clang_format#auto_format_on_insert_leave = 1
-autocmd FileType c ClangFormatAutoEnable
+let g:clang_format#code_style = 'llvm'
+let g:clang_format#auto_format = 0
+let g:clang_format#auto_format_on_insert_leave = 0
+let g:clang_format#style_options = {
+            \ "AlignOperands" : "false",
+            \ "AllowAllParametersOfDeclarationOnNextLine" : "false",
+            \ "AllowShortFunctionsOnASingleLine" : "Inline",
+            \ "BinPackArguments" : "false",
+            \ "BinPackParameters" : "false",
+            \ "BreakBeforeBraces" : "Allman",
+            \ "BreakStringLiterals" : "false",
+            \ "ColumnLimit" : 200,
+            \ "IndentCaseLabels" : "true",
+            \ "IndentWidth" : "4"}
+" autocmd FileType c ClangFormatAutoEnable
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)

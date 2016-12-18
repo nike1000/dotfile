@@ -257,7 +257,8 @@ let g:clang_format#style_options = {
             \ "BreakStringLiterals" : "false",
             \ "ColumnLimit" : 200,
             \ "IndentCaseLabels" : "true",
-            \ "IndentWidth" : "4"}
+            \ "IndentWidth" : "4",
+            \ "PointerAlignment" : "Right"}
 " autocmd FileType c ClangFormatAutoEnable
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>

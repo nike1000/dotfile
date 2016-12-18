@@ -1,7 +1,7 @@
 """-----------------------------------------
 " Encoding Setting
 "-----------------------------------------
-set encoding=utf-8                                  
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,big5
@@ -16,7 +16,7 @@ filetype plugin indent on	" 啟動自動完成
 
 set nocompatible	" VIM 不使用和 VI 相容的模式
 set confirm      	" 操作過程有衝突時，以明確的文字來詢問
-set background=dark " 啟用暗色背景模式 
+set background=dark " 啟用暗色背景模式
 set hlsearch        " 搜尋結果上色
 
 set nobackup		" 取消備份
@@ -53,7 +53,7 @@ set backspace=eol,start,indent
 " ShortCut Setting
 "-----------------------------------------
 " 設置 <Leader>
-let mapleader="z"                                  
+let mapleader="z"
 
 " 貼上模式
 nnoremap <silent> <Leader>p :set paste<CR>
@@ -62,7 +62,7 @@ nnoremap <silent> <Leader>p :set paste<CR>
 nnoremap <silent> <Leader>q zM<CR>
 
 " 全部展開
-nnoremap <silent> <Leader>z zR<CR> 
+nnoremap <silent> <Leader>z zR<CR>
 
 " 開關視覺縮排
 nnoremap <silent> <Leader>i <Plug>IndentGuidesToggle
@@ -113,9 +113,10 @@ NeoBundle 'Shougo/neocomplete'                      " 自動補齊 選單
 " NeoBundle 'Shougo/neosnippet-snippets'              " 快速模板定義
 NeoBundle 'chriskempson/vim-tomorrow-theme'         " 支援多種 IDE 的 colorscheme theme
 NeoBundle 'airblade/vim-gitgutter'                  " gitdiff 狀態顯示
-NeoBundle 'rhysd/vim-clang-format'
+NeoBundle 'rhysd/vim-clang-format'                  " C/C++ 排版
 NeoBundle 'kana/vim-operator-user'
 NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'ntpeters/vim-better-whitespace'          " 顯示句尾空白
 
 call neobundle#end()
 
